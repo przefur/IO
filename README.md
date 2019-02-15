@@ -60,8 +60,10 @@ Add pip packages with '--user' option
 ## Parallelization
 Parallelization was achieved using mpi4py library. Each process is assigned its own island. In the scope of each iteration an evolution algotrithm is run (DEAP) and best result is propagated to other processes. Currently two different topologies are supported:
 - circle topology with RTT propagation
+
 ![alt text](https://github.com/przefur/IO/blob/master/images/circle_top.png)
 - star topology
+
 ![alt text](https://github.com/przefur/IO/blob/master/images/star_top.png)
 
 In case of error on one of the processes the failover can be done with following procedure:

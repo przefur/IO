@@ -57,7 +57,13 @@ plgrid/tools/python-intel/3.6.5
 Add pip packages with '--user' option
 ```
 
+## Way forward/simple improvements
+```
+First things You should look at is probably parallelization, as it would drastically lower the time needed to process the tasks.
+```
+
 ## Experiment
 
 At this point You are most likely ready to develop extensions and new features to the code, enjoy!
+Please note that running a batch job with as low as 1000 islands and 300 individuals per islands, can take exceptionally long time to process.
 

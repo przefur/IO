@@ -22,7 +22,7 @@ A step by step series of examples that tell you how to get a development env run
 Python Installation
 
 ```
-Pretty Straightforward, download and install version of Your choice from https://www.python.org/downloads/
+Pretty Straightforward, download and install version of Your choice from [Python](https://www.python.org/downloads/)
 ```
 
 Python Packages Installation
@@ -44,7 +44,7 @@ To run the tests, You need a valid connection to Zeus/Prometheus
 You would like to get started around here: 
 
 ```
-https://docs.cyfronet.pl/display/PLGDoc
+[ZEUS](https://docs.cyfronet.pl/display/PLGDoc)
 ```
 
 ### After You get an account up and running with resources
@@ -67,3 +67,8 @@ First things You should look at is probably parallelization, as it would drastic
 At this point You are most likely ready to develop extensions and new features to the code, enjoy!
 Please note that running a batch job with as low as 1000 islands and 300 individuals per islands, can take exceptionally long time to process.
 
+## Useful links:
+
+[DEAP](https://deap.readthedocs.io/en/master/)
+[ZEUS](https://docs.cyfronet.pl/display/PLGDoc)
+[MPI4PY](https://mpi4py.readthedocs.io/en/stable/)

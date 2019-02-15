@@ -57,11 +57,30 @@ plgrid/tools/python-intel/3.6.5
 Add pip packages with '--user' option
 ```
 
-## Way forward/simple improvements
+## Parallelization
+Parallelization was achieved using mpi4py library. Each process is assigned its own island. In the scope of each iteration an evolution algotrithm is run (DEAP) and best result is propagated to other processes. Currently two different topologies are supported:
+- circle topology with RTT propagation
+![alt text](https://github.com/przefur/IO/blob/master/images/circle_top.png)
+- star topology
+![alt text](https://github.com/przefur/IO/blob/master/images/star_top.png)
+
+In case of error on one of the processes the failover can be done with following procedure:
 ```
-First things You should look at is probably parallelization, as it would drastically lower the time needed to process the tasks.
+try:
+  <communication operation to process X>
+except:
+  <change the address from process X to Y, repeat communication operation>
 ```
 
+Currently the process is not supporting the failover opeartion due to switch to communication functions that don't support it. Change was done to improve the performance of the system.
+
+Each process goes through following states when running:
+![alt text](https://github.com/przefur/IO/blob/master/images/phases.png)
+First the initial values are innitiated and variables required by the program are setup. The execution command should look like that:
+```
+python main.py <population of each island> <number of iterations> <topology type> [<RTT for circle topology] [<density for star topology>]
+```
+Afterwards the single iteration of evolution algorithm is run and the results are send to the processes next to the source. Afterwards all communications are resolved and part of the old population is overwritten by newcomers. That process is repeated until the number of iterations stated in the command line is reached.
 ## Experiment
 
 At this point You are most likely ready to develop extensions and new features to the code, enjoy!

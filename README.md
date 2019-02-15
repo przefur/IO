@@ -82,6 +82,16 @@ First the initial values are innitiated and variables required by the program ar
 python main.py <population of each island> <number of iterations> <topology type> [<RTT for circle topology] [<density for star topology>]
 ```
 Afterwards the single iteration of evolution algorithm is run and the results are send to the processes next to the source. Afterwards all communications are resolved and part of the old population is overwritten by newcomers. That process is repeated until the number of iterations stated in the command line is reached.
+### Results
+After running main.py on Zeus node with 48 processors following results were found for small amount of iterations:
+
+![alt text](https://github.com/przefur/IO/blob/master/images/speedup.png)
+
+![alt text](https://github.com/przefur/IO/blob/master/images/efficiency.png)
+
+There're some visible improvements for small amount of iterations. Sadly for higher amount (above 100) due to unexplained desynchronizations between different nodes the execution times become much higher with higher number of processes bringing the speedup down.
+
+
 ## Experiment
 
 At this point You are most likely ready to develop extensions and new features to the code, enjoy!

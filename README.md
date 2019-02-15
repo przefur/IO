@@ -4,7 +4,7 @@ Project for 2018/2019 IO classes
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get You a copy of the project up and running on Your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ To run the tests, You need a valid connection to Zeus/Prometheus
 You would like to get started around here: 
 
 ```
-[ZEUS](https://docs.cyfronet.pl/display/PLGDoc)
+ZEUS - https://docs.cyfronet.pl/display/PLGDoc
 ```
 
 ### After You get an account up and running with resources
@@ -70,5 +70,7 @@ Please note that running a batch job with as low as 1000 islands and 300 individ
 ## Useful links:
 
 [DEAP](https://deap.readthedocs.io/en/master/)
+
 [ZEUS](https://docs.cyfronet.pl/display/PLGDoc)
+
 [MPI4PY](https://mpi4py.readthedocs.io/en/stable/)

@@ -76,6 +76,7 @@ Currently the process is not supporting the failover opeartion due to switch to 
 
 Each process goes through following states when running:
 ![alt text](https://github.com/przefur/IO/blob/master/images/phases.png)
+
 First the initial values are innitiated and variables required by the program are setup. The execution command should look like that:
 ```
 python main.py <population of each island> <number of iterations> <topology type> [<RTT for circle topology] [<density for star topology>]
